@@ -1,0 +1,40 @@
+#ENCRYPTION
+
+import random
+import string
+
+chars = " " + string.punctuation + string.ascii_letters + string.digits
+chars = list(chars)
+
+key = list(chars).copy()
+random.shuffle(chars)
+
+print(f"Characters : {chars} ")
+print()
+print(f"Keys : {key}")
+
+#ENCRYPT
+print("-------------------------------------------------------")
+plain_text = input("Please enter message you want to encrypt: ")
+cipher_text = ""
+
+for letters in plain_text:
+    index = chars.index(letters)
+    cipher_text += key[index]
+print()
+print("-------------------------------------------------------")
+print(f"Your encrypted message: {cipher_text}")
+print("-------------------------------------------------------")
+
+#DECRYPT
+print("-------------------------------------------------------")
+encrypted_message = input("Please enter message you want to decrypt: ")
+Decrypted_message = ""
+
+for letters in encrypted_message:
+    index = key.index(letters)
+    Decrypted_message += chars[index]
+print()
+print("-------------------------------------------------------")
+print(f"Your decrypted message: {Decrypted_message}")
+print("-------------------------------------------------------")
