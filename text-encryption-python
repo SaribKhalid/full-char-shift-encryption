@@ -1,4 +1,4 @@
-#ENCRYPTION
+#TEXT ENCRYPTION IN PYTHON
 
 import random
 import string
